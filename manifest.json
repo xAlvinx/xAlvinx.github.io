@@ -3,37 +3,37 @@
     "short_name": "PWAGram",
     "icons": [
       {
-        "src": "wallpaper.jpg",
+        "src": "budi.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "wallpaper.jpg",
+        "src": "budi.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "wallpaper.jpg",
+        "src": "budi.png",
         "type": "image/png",
         "sizes": "144x144"
       },
       {
-        "src": "wallpaper.jpg",
+        "src": "budi.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "wallpaper.jpg",
+        "src": "budi.png",
         "type": "image/png",
         "sizes": "256x256"
       },
       {
-        "src": "wallpaper.jpg",
+        "src": "budi.png",
         "type": "image/png",
         "sizes": "384x384"
       },
       {
-        "src": "wallpaper.jpg",
+        "src": "budi.png",
         "type": "image/png",
         "sizes": "512x512"
       }
