@@ -8,7 +8,7 @@ self.addEventListener('install', function(event) {
             'blog.html',
             'about.html',
             'contact.html',
-            'portoflio-example01.html',
+            'portfolio-example01.html',
             'styles.css',
             'app.js'
           ])
