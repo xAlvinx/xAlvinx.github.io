@@ -5,20 +5,48 @@ self.addEventListener('install', function(event) {
           cache.addAll([
             '/',
             'index.html',
-            'src/css/app.css',
-            'src/js/app.js'
+            'blog.html',
+            'about.html',
+            'contact.html',
+            'portoflio-example01.html',
+            'styles.css',
+            'app.js'
           ])
         })
     );
     return self.clients.claim();
   });
-  
   self.addEventListener('fetch', function(event) {
     event.respondWith(
       caches.match(event.request)
-        .then(function(res) {
-          return res;
+        .then(function(response) {
+          if (response) {
+            return response;
+          } else {
+            return fetch(event.request)
+              .then(function(res) {
+                return caches.open('first-app')
+                  .then(function(cache) {
+                    return fetch(event.request)
+                    .then(function(res){
+
+                    cache.put(event.request.url, res.clone());
+                    return res;
+                  })
+              })
+            })
+              .catch(function(err) {
+                return caches.open('first-app')
+                  .then(function(cache) {
+                    return fetch(event.request)
+                    .then(function(res){
+
+                    cache.put(event.request.url, res.clone());
+                    return res;
+                  })
+                  });
+              });
+          }
         })
     );
   });
-    
