@@ -10,7 +10,7 @@ self.addEventListener('install', function(event) {
             'contact.html',
             'portofolio-example01.html',
             'styles.css',
-            'src/js/app.js'
+            'app.js'
           ])
         })
     );
